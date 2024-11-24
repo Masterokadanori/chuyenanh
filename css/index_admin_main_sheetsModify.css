@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: flex-start;
+  margin-top: 50px; /* Adds spacing from the top */
+  width: 80%; /* Adjust width of the container */
+  flex-wrap: wrap; /* Allows items to wrap */
+  background: rgba(200, 200, 200, 0.5);
+}
+
+.item {
+  width: 70%;
+  margin: 25px;
+  background: white;
+  padding-left: 10%;
+  padding-right: 15px;
+  height: 13vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr; /* Correct grid template */
+  gap: 10px;
+  place-items: center;
+}
+.delete_but:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.edit_but:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+nav{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 85vh;
+  background: rgba(200, 200, 200);
+  display: flex;
+  justify-content: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  column-gap: 10%;
+  align-items: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.btn-16 {
+  position: relative; /* Ensure pseudo-elements are positioned relative to the button */
+  display: inline-block; /* Restrict size to the button content */
+  padding: 10px 20px; /* Add some padding for button size */
+  border: 1px soid black;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer; /* Show pointer on hover */
+  font-family: "Lato", sans-serif; /* Match the font */
+  background: transparent; /* Set background to transparent */
+  overflow: hidden; /* Ensure the pseudo-element doesn’t overflow the button */
+  z-index: 1; /* Ensure button text is above pseudo-element */
+}
+
+.btn-16::after {
+  content: ""; /* Add empty content for the pseudo-element */
+  position: absolute; /* Position relative to the button */
+  width: 0; /* Initial width is 0 */
+  height: 100%; /* Match button's height */
+  top: 0;
+  left: 0;
+  background: #f0f0f0; /* Add a background for hover effect */
+  z-index: -1; /* Place behind the button text */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.btn-16:hover {
+  color: #000; /* Change text color on hover */
+}
+
+.btn-16:hover::after {
+  width: 100%; /* Expand pseudo-element to full width */
+}
+
+.btn-16:active {
+  top: 2px; /* Simulate button press effect */
+}

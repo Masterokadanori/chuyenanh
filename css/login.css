@@ -1,0 +1,79 @@
+#layout{
+    display:grid; 
+    width:100%;
+    height:90vh;
+    place-items: center;
+}
+
+
+
+.container{
+    display:grid;
+    justify-items: left;
+     align-items: start; 
+    grid-template-columns: 1fr 1fr;
+    width:40%;
+    height:40vh;
+    background: rgb(29, 28, 28,0.2);
+    font-size: xx-large;
+    padding:30px;
+}
+
+input{
+    grid-template-columns: span 3;
+    width:100%;
+    height:5vh;
+    border-radius: 10px;
+}	
+
+
+.btn-16 {
+    position: relative; /* Ensure pseudo-elements are positioned relative to the button */
+    display: inline-block; /* Restrict size to the button content */
+    padding: 10px 20px; /* Add some padding for button size */
+    border: 1px soid black;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer; /* Show pointer on hover */
+    font-family: "Lato", sans-serif; /* Match the font */
+    background: transparent; /* Set background to transparent */
+    overflow: hidden; /* Ensure the pseudo-element doesn’t overflow the button */
+    z-index: 1; /* Ensure button text is above pseudo-element */
+  }
+  
+  .btn-16::after {
+    content: ""; /* Add empty content for the pseudo-element */
+    position: absolute; /* Position relative to the button */
+    width: 0; /* Initial width is 0 */
+    height: 100%; /* Match button's height */
+    top: 0;
+    left: 0;
+    background: #f0f0f0; /* Add a background for hover effect */
+    z-index: -1; /* Place behind the button text */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  .btn-16:hover {
+    color: #000; /* Change text color on hover */
+  }
+  
+  .btn-16:hover::after {
+    width: 100%; /* Expand pseudo-element to full width */
+  }
+  
+  .btn-16:active {
+    top: 2px; /* Simulate button press effect */
+  }
+
+  
+  img{
+    width:5%;
+    height:10vh;
+    position:fixed;
+    top:5vh;
+    left:5%;
+  }
+  img:hover{
+    transform: scale(1.3);
+    transition: 0.3s ease;
+  }
