@@ -1,0 +1,72 @@
+#nameSheet{
+    background:white;
+    height:8vh;
+    width:fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#nameSheet:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+
+.home_but:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+    color: blue;
+    text-decoration: underline; 
+}
+
+
+.finish_but{
+    background:white;
+    height:8vh;
+    width:10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.finish_but:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.container_edit{
+    background: rgb(200,200,200);
+    margin-top:15vh;
+    width:80%;
+    place-items: center start;
+    display:grid;
+    grid-template-columns: 1;
+    grid-template-rows: span 2;
+    padding-left :50px;
+    padding-right: 50px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+
+input{
+    background: transparent;
+        font-size: 24px; /* Larger text for placeholder */
+        font-weight: bold;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid rgb(255,255,255,0.5);
+        padding: 10px 0;
+        outline: none;
+        transition: border-color 0.3s;
+}
+input:focus {
+    border-bottom: 2px solid #6200ee; /* Purple underline on focus */
+}
+
+input::placeholder {
+    color: #333; /* Darker placeholder color */
+}
