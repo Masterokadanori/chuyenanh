@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editing</title>
+    <link rel="stylesheet" href="./css/edit_sheet.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+  </head>
+  <body>
+    <nav>
+      <h1 class="home_but" onclick = "goBack()">Home</h1>
+      <div id="nameSheet">
+        <h1>Nameless sheet</h1>
+      </div>
+      <div class="finish_but">
+        <h1>Finish</h1>
+      </div>
+    </nav>
+    <!-- Body -->
+     <div style = "display:flex; justify-content: center;">
+        <div class = "container_edit" style = "border: 1px solid black">
+            <input type="text" id="title" placeholder="Nameless sheet">
+            <input type = "text" id="title" placeholder = "Description about your sheet"></h3>
+         </div>
+     </div>
+     <div id = "hold">
+
+     </div>
+     <script>
+        function goBack() {
+            window.location.href ="admin_main.html";
+        }
+     </script>
+  </body>
+</html>

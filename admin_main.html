@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit mode</title>
+    <link rel="stylesheet" href="css/layout.css" />
+    <style>
+      /* Apply to all elements */
+      #logout:hover {
+        transform: scale(1.5);
+        transition: transform 0.3s ease; /* Smooth scaling effect */
+        color: blue;
+        text-decoration: underline;
+      }
+      #create_ex:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+    </style>
+    <script>
+      // Check if 'username' exists in localStorage
+      if (localStorage.getItem("login") !== "YES") {
+        console.log("Go to index.html");
+        window.location.href = "index.html";
+      }
+    </script>
+    <script>
+      //Creating description for button
+    </script>
+  </head>
+  <body>
+    <nav>
+      <h1>Edit mode</h1>
+      <h1 id="logout">Logout</h1>
+    </nav>
+    <div style="display: flex; justify-content: center; margin-top: 100px">
+      <div class="container" id="hold">
+        <h1>Danh sách các đề</h1>
+        <div class="item" id="create_ex">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Circled_plus.svg/640px-Circled_plus.svg.png"
+            style="width: 50%; height: 70%"
+          />
+          <h2>Click here to create new test</h2>
+        </div>
+      </div>
+    </div>
+    <script src="js/showing_ex.js"></script>
+    <script>
+      const logOut_but = document.getElementById("logout");
+      logOut_but.addEventListener("click", () => logOut());
+      function logOut() {
+        localStorage.setItem("login", "NO");
+        window.location.href = "index.html";
+      }
+    </script>
+    <script src="./js/edit_sheets.js"></script>
+  </body>
+</html>

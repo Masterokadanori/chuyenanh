@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Learning</title>
+   
+    <script>
+      if (localStorage.getItem('login') == "YES")
+    {
+        window.location.href ="admin_main.html";
+    }
+    </script>
+
+    <link rel = "stylesheet" href = "./css/layout.css">
+    
+    <style>
+    .item:hover{
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+        border:1px solid black;
+        border-radius: 5px;
+    }
+    </style>
+
+</head>
+<body>
+    <div style = "display:grid;justify-content: center;align-items: center;">
+        <h1>Bạn muốn tạo đề?</h1>
+        <button class="custom-btn btn-16" id ="go">Click here</button>
+    </div>
+    <div style = "display:flex; justify-content: center;">
+        <div class="container" id = "hold">
+              <h1>Danh sách các đề</h1>
+            </div>
+        </div>
+</div>
+
+<script>
+    // Define the function
+    function goToWebsite() {
+// Change the URL to the desired website
+window.location.href = "login.html";
+}
+// Attach the function to the button's click event
+document.getElementById("go").addEventListener("click", goToWebsite);
+</script>
+<script src = "js/showing_ex.js"></script>
+</body>
+</html>
