@@ -1,3 +1,13 @@
+
+
+//Go back to index.html
+const backButton = document.getElementById('goBack');
+backButton.addEventListener('click',() => {
+  window.location.href = "index.html";
+})
+
+
+
 // Import necessary Firebase modules
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
 import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
@@ -22,8 +32,8 @@ document.querySelector("button").addEventListener("click", async (event) => {
   event.preventDefault(); // Prevent form submission
   
   // Get user inputs
-  const email = document.getElementById("exampleInputEmail1").value.trim();
-  const password = document.getElementById("exampleInputPassword1").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
   
 
   try {
